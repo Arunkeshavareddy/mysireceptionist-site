@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>.dome{fill:#1F3FB0}.base{fill:#131A2B}@media (prefers-color-scheme:dark){.dome{fill:#93A8FF}.base{fill:#E9ECF5}}</style>
+  <rect class="dome" x="12.5" y="7" width="7" height="2.4" rx="1.2"/>
+  <rect class="dome" x="14.6" y="8.6" width="2.8" height="4.4" rx="1"/>
+  <path class="dome" d="M6 22.5a10 10 0 0 1 20 0z"/>
+  <rect class="base" x="3.5" y="23.5" width="25" height="3.2" rx="1.6"/>
+</svg>
