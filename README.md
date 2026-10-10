@@ -2,9 +2,10 @@
 
 The public website for **My SI Receptionist**, the receptionist that finishes the job.
 
-Plain HTML, CSS and JavaScript, served by GitHub Pages. No build step: edit the files and push.
+Plain HTML, CSS and JavaScript, served by GitHub Pages. No build step: edit the files, run `python3 stamp.py` so browsers pick up the new CSS and JavaScript straight away, then push.
 
 - `index.html`: the page
 - `styles.css`: styles, including light and dark mode
 - `site.js`: early-access sign-up form (set `FORM_ENDPOINT` to connect it)
 - `favicon.svg`: the desk-bell icon
+- `stamp.py`: tags the CSS and JavaScript links with a content hash
