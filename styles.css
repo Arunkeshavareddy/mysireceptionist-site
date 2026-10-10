@@ -22,6 +22,8 @@
   --band-alarm: #FF8F75;
   --shadow: 0 1px 2px rgba(19, 26, 43, .06), 0 14px 34px -14px rgba(19, 26, 43, .28);
 
+  --scribble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M4 13 C 70 5, 130 17, 190 9 S 270 7, 296 11' fill='none' stroke='%231F3FB0' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+
   --slip: #FADCE1;
   --slip-rule: #EDB5C0;
   --slip-print: #9B2C43;
@@ -53,6 +55,7 @@
     --done: #52C28A;
     --alarm: #FF8F75;
     --band: #171D31;
+    --scribble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M4 13 C 70 5, 130 17, 190 9 S 270 7, 296 11' fill='none' stroke='%2393A8FF' stroke-width='5' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 18px 44px -14px rgba(0, 0, 0, .75);
   }
 }
@@ -118,9 +121,13 @@ h1 {
   font-size: var(--step-4); line-height: .98; letter-spacing: -.02em;
   text-wrap: balance; margin: 18px 0 24px;
 }
-.mark { display: inline-block; position: relative; color: var(--pen); }
-.mark svg { position: absolute; left: -1%; bottom: -.12em; width: 102%; height: .3em; overflow: visible; }
-.mark path { fill: none; stroke: currentColor; stroke-width: 5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.mark {
+  color: var(--pen);
+  background: var(--scribble) no-repeat 0 100% / 100% .28em;
+  padding-bottom: .1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 .lead { font-size: var(--step-1); color: var(--ink-2); max-width: 40ch; margin: 0; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .hero-note { margin: 18px 0 0; font-size: .93rem; color: var(--muted); }
@@ -144,7 +151,7 @@ h1 {
   text-decoration-color: var(--slip-pen); text-decoration-thickness: 3px;
 }
 .slip-correction {
-  position: absolute; right: 0; top: -16px; transform: rotate(-5deg);
+  position: absolute; right: 2px; top: -5px; transform: rotate(-5deg);
   font-family: var(--hand); font-weight: 700; font-size: 1.45rem; color: var(--slip-pen);
 }
 .slip-fields { display: grid; gap: 6px; margin: 0 0 16px; }
