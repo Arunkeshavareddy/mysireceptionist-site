@@ -84,7 +84,7 @@ a { color: var(--pen); text-underline-offset: 3px; }
 
 /* ---------- header ---------- */
 .site-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: var(--display); font-stretch: 85%; font-weight: 780; font-size: 1.18rem; letter-spacing: -.01em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: var(--display); font-stretch: 85%; font-weight: 780; font-size: 1.18rem; letter-spacing: -.01em; white-space: nowrap; }
 .bell { width: 30px; height: 30px; flex: none; }
 .bell .dome { fill: var(--pen); }
 .bell .base { fill: var(--ink); }
@@ -92,6 +92,8 @@ a { color: var(--pen); text-underline-offset: 3px; }
 .nav-link { color: var(--ink-2); text-decoration: none; font-weight: 500; }
 .nav-link:hover { color: var(--pen); }
 @media (max-width: 760px) { .nav-link { display: none; } }
+/* on phones the hero's own button sits right below, so the header copy is dropped */
+@media (max-width: 440px) { .nav .btn { display: none; } }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -225,12 +227,12 @@ h2 { font-family: var(--display); font-stretch: 80%; font-weight: 800; font-size
 
 /* FAQ */
 .faq-list { max-width: 50rem; border-top: 1px solid var(--line); }
-.faq-list details { border-bottom: 1px solid var(--line); padding: 18px 0; }
-.faq-list summary { display: flex; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; font-weight: 650; font-size: 1.08rem; }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; min-height: 56px; cursor: pointer; list-style: none; font-weight: 650; font-size: 1.08rem; }
 .faq-list summary::-webkit-details-marker { display: none; }
 .faq-list summary::after { content: "+"; color: var(--pen); font-weight: 700; font-size: 1.3rem; line-height: 1; }
 .faq-list details[open] summary::after { content: "\2212"; }
-.faq-list details p { margin: 10px 0 0; color: var(--ink-2); max-width: 62ch; }
+.faq-list details p { margin: -4px 0 0; padding-bottom: 18px; color: var(--ink-2); max-width: 62ch; }
 
 /* sign-up */
 .signup { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: 1fr; gap: clamp(24px, 4vw, 48px); }
