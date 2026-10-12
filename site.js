@@ -1,6 +1,6 @@
 // Early-access sign-ups. Set FORM_ENDPOINT to the form service URL
 // (for example a Formspree endpoint) to start collecting sign-ups.
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xwlvqaal";
 
 const form = document.getElementById("signup-form");
 const statusLine = document.getElementById("form-status");
